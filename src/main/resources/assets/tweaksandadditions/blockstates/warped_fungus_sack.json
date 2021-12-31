@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tweaksandadditions:block/warped_fungus_sack"
+      },
+      {
+        "model": "tweaksandadditions:block/warped_fungus_sack",
+        "y": 90
+      },
+      {
+        "model": "tweaksandadditions:block/warped_fungus_sack",
+        "y": 180
+      },
+      {
+        "model": "tweaksandadditions:block/warped_fungus_sack",
+        "y": 270
+      }
+    ]
+  }
+}

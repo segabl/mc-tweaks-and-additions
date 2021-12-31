@@ -23,7 +23,8 @@ public class TweaksAndAdditions implements ModInitializer {
 	public static final Item[] ITEM_SACK_SOURCES = {
 			Items.APPLE, Items.GOLDEN_APPLE, Items.CARROT, Items.GOLDEN_CARROT,	Items.POTATO, Items.BEETROOT,
 			Items.SWEET_BERRIES, Items.GLOW_BERRIES, Items.CHORUS_FRUIT, Items.WHEAT_SEEDS, Items.BEETROOT_SEEDS,
-			Items.MELON_SEEDS, Items.PUMPKIN_SEEDS, Items.COCOA_BEANS
+			Items.MELON_SEEDS, Items.PUMPKIN_SEEDS, Items.COCOA_BEANS, Items.BROWN_MUSHROOM, Items.RED_MUSHROOM,
+			Items.CRIMSON_FUNGUS, Items.WARPED_FUNGUS
 	};
 
 	public static final HashMap<Identifier, GeneratedBlock> generatedBlocks = new HashMap<>();
