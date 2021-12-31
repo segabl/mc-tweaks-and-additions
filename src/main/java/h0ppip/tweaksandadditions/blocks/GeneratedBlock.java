@@ -7,10 +7,10 @@ import net.minecraft.util.Identifier;
 
 import java.util.HashMap;
 
-public abstract class DynGenBlock extends Block {
+public abstract class GeneratedBlock extends Block {
 	protected Identifier identifier;
 
-	public DynGenBlock(Settings settings) {
+	public GeneratedBlock(Settings settings) {
 		super(settings);
 	}
 
@@ -25,7 +25,7 @@ public abstract class DynGenBlock extends Block {
 
 	public abstract HashMap<Identifier, JsonObject> createRecipes();
 
-	public abstract JsonUnbakedModel createModel(String type);
-
 	public abstract HashMap<Identifier, JsonObject> createLootDrops();
+
+	public abstract JsonUnbakedModel createModel(String type);
 }

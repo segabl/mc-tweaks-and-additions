@@ -1,8 +1,11 @@
 package h0ppip.tweaksandadditions;
 
-import h0ppip.tweaksandadditions.blocks.DynGenBlock;
+import h0ppip.tweaksandadditions.blocks.CompressedItemBlock;
+import h0ppip.tweaksandadditions.blocks.GeneratedBlock;
 import h0ppip.tweaksandadditions.blocks.ItemSackBlock;
 import net.fabricmc.api.ModInitializer;
+import net.minecraft.block.AbstractBlock;
+import net.minecraft.block.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.util.Identifier;
@@ -23,11 +26,12 @@ public class TweaksAndAdditions implements ModInitializer {
 			Items.MELON_SEEDS, Items.PUMPKIN_SEEDS, Items.COCOA_BEANS
 	};
 
-	public static final HashMap<Identifier, DynGenBlock> dynGenBlocks = new HashMap<>();
+	public static final HashMap<Identifier, GeneratedBlock> generatedBlocks = new HashMap<>();
 	static {
+		AbstractBlock.Settings itemSackSettings = AbstractBlock.Settings.of(Material.ORGANIC_PRODUCT).nonOpaque().hardness(0.25f).resistance(1);
 		for (Item i: ITEM_SACK_SOURCES) {
-			DynGenBlock b = new ItemSackBlock(i);
-			dynGenBlocks.put(b.getIdentifier(), b);
+			GeneratedBlock b = new ItemSackBlock(itemSackSettings, i);
+			generatedBlocks.put(b.getIdentifier(), b);
 		}
 	}
 
@@ -37,7 +41,7 @@ public class TweaksAndAdditions implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		for (DynGenBlock b: dynGenBlocks.values()) {
+		for (GeneratedBlock b: generatedBlocks.values()) {
 			b.registerBlock();
 		}
 	}

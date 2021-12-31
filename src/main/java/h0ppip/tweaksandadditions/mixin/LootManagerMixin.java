@@ -2,7 +2,7 @@ package h0ppip.tweaksandadditions.mixin;
 
 import com.google.gson.JsonElement;
 import h0ppip.tweaksandadditions.TweaksAndAdditions;
-import h0ppip.tweaksandadditions.blocks.DynGenBlock;
+import h0ppip.tweaksandadditions.blocks.GeneratedBlock;
 import net.minecraft.loot.LootManager;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;
@@ -19,7 +19,7 @@ import java.util.Map;
 public class LootManagerMixin {
 	@Inject(at = @At("HEAD"), method = "apply")
 	public void apply(Map<Identifier, JsonElement> map, ResourceManager resourceManager, Profiler profiler, CallbackInfo ci) {
-		for (DynGenBlock b: TweaksAndAdditions.dynGenBlocks.values()) {
+		for (GeneratedBlock b: TweaksAndAdditions.generatedBlocks.values()) {
 			TweaksAndAdditions.log(Level.INFO, "Adding loot drops for " + b.getIdentifier().getPath());
 			map.putAll(b.createLootDrops());
 		}

@@ -2,7 +2,7 @@ package h0ppip.tweaksandadditions.mixin;
 
 import com.google.gson.JsonElement;
 import h0ppip.tweaksandadditions.TweaksAndAdditions;
-import h0ppip.tweaksandadditions.blocks.DynGenBlock;
+import h0ppip.tweaksandadditions.blocks.GeneratedBlock;
 import net.minecraft.recipe.RecipeManager;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;
@@ -20,7 +20,7 @@ public class RecipeManagerMixin {
 
 	@Inject(method = "apply", at = @At("HEAD"))
 	public void apply(Map<Identifier, JsonElement> map, ResourceManager resourceManager, Profiler profiler, CallbackInfo info) {
-		for (DynGenBlock b: TweaksAndAdditions.dynGenBlocks.values()) {
+		for (GeneratedBlock b: TweaksAndAdditions.generatedBlocks.values()) {
 			TweaksAndAdditions.log(Level.INFO, "Adding recipes for " + b.getIdentifier().getPath());
 			map.putAll(b.createRecipes());
 		}

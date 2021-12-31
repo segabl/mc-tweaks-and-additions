@@ -1,7 +1,7 @@
 package h0ppip.tweaksandadditions.mixin;
 
 import h0ppip.tweaksandadditions.TweaksAndAdditions;
-import h0ppip.tweaksandadditions.blocks.DynGenBlock;
+import h0ppip.tweaksandadditions.blocks.GeneratedBlock;
 import net.minecraft.client.render.model.ModelLoader;
 import net.minecraft.client.render.model.json.JsonUnbakedModel;
 import net.minecraft.util.Identifier;
@@ -22,7 +22,7 @@ public class ModelLoaderMixin {
 
 		String[] path = id.getPath().split("/");
 
-		DynGenBlock block = TweaksAndAdditions.dynGenBlocks.getOrDefault(new Identifier(id.getNamespace(), path[1]), null);
+		GeneratedBlock block = TweaksAndAdditions.generatedBlocks.getOrDefault(new Identifier(id.getNamespace(), path[1]), null);
 		if (block == null) {
 			return;
 		}
