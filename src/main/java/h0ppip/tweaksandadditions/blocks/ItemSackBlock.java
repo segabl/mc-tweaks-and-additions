@@ -22,7 +22,7 @@ public class ItemSackBlock extends DynGenBlock {
 	private Identifier itemIdentifier;
 
 	public ItemSackBlock(Item item) {
-		super(Settings.of(Material.ORGANIC_PRODUCT).nonOpaque().hardness(0.5f).resistance(0));
+		super(Settings.of(Material.ORGANIC_PRODUCT).nonOpaque().hardness(0.25f).resistance(1));
 
 		this.item = item;
 		this.itemIdentifier = Registry.ITEM.getId(this.item);
