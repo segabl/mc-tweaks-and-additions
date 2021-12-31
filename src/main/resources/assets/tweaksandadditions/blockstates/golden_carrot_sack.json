@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tweaksandadditions:block/golden_carrot_sack"
+      },
+      {
+        "model": "tweaksandadditions:block/golden_carrot_sack",
+        "y": 90
+      },
+      {
+        "model": "tweaksandadditions:block/golden_carrot_sack",
+        "y": 180
+      },
+      {
+        "model": "tweaksandadditions:block/golden_carrot_sack",
+        "y": 270
+      }
+    ]
+  }
+}

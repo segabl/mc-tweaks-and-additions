@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tweaksandadditions:block/wheat_seeds_sack"
+      },
+      {
+        "model": "tweaksandadditions:block/wheat_seeds_sack",
+        "y": 90
+      },
+      {
+        "model": "tweaksandadditions:block/wheat_seeds_sack",
+        "y": 180
+      },
+      {
+        "model": "tweaksandadditions:block/wheat_seeds_sack",
+        "y": 270
+      }
+    ]
+  }
+}

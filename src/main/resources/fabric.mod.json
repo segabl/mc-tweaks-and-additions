@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "tweaksandadditions",
+	"version": "${version}",
+	"name": "TweaksAndAdditions",
+	"description": "Small tweaks and additions for Minecraft",
+	"authors": [
+		"Hoppip"
+	],
+	"contact": {},
+	"license": "GPL-3.0",
+	"icon": "assets/tweaksandadditions/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"client": [
+			"h0ppip.tweaksandadditions.client.TweaksAndAdditionsClient"
+		],
+		"main": [
+			"h0ppip.tweaksandadditions.TweaksAndAdditions"
+		]
+	},
+	"mixins": [
+		"TweaksAndAdditions.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.12.11",
+		"fabric": "*",
+		"minecraft": "1.18.x"
+	}
+}

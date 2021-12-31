@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tweaksandadditions:block/glow_berries_sack"
+      },
+      {
+        "model": "tweaksandadditions:block/glow_berries_sack",
+        "y": 90
+      },
+      {
+        "model": "tweaksandadditions:block/glow_berries_sack",
+        "y": 180
+      },
+      {
+        "model": "tweaksandadditions:block/glow_berries_sack",
+        "y": 270
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tweaksandadditions:block/potato_sack"
+      },
+      {
+        "model": "tweaksandadditions:block/potato_sack",
+        "y": 90
+      },
+      {
+        "model": "tweaksandadditions:block/potato_sack",
+        "y": 180
+      },
+      {
+        "model": "tweaksandadditions:block/potato_sack",
+        "y": 270
+      }
+    ]
+  }
+}

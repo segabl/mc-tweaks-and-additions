@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "tweaksandadditions:block/cocoa_beans_sack"
+      },
+      {
+        "model": "tweaksandadditions:block/cocoa_beans_sack",
+        "y": 90
+      },
+      {
+        "model": "tweaksandadditions:block/cocoa_beans_sack",
+        "y": 180
+      },
+      {
+        "model": "tweaksandadditions:block/cocoa_beans_sack",
+        "y": 270
+      }
+    ]
+  }
+}

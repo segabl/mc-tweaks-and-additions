@@ -1,0 +1,18 @@
+{
+	"enchantment.minecraft.mending.desc": "Repairing or enchanting the tool does not increase repair costs.",
+
+	"block.tweaksandadditions.apple_sack": "Sack of Apples",
+	"block.tweaksandadditions.beetroot_sack": "Sack of Beetroots",
+	"block.tweaksandadditions.beetroot_seeds_sack": "Sack of Beetroot Seeds",
+	"block.tweaksandadditions.carrot_sack": "Sack of Carrots",
+	"block.tweaksandadditions.chorus_fruit_sack": "Sack of Chorus Fruit",
+	"block.tweaksandadditions.cocoa_beans_sack": "Sack of Cocoa Beans",
+	"block.tweaksandadditions.glow_berries_sack": "Sack of Glow Berries",
+	"block.tweaksandadditions.golden_apple_sack": "Sack of Golden Apples",
+	"block.tweaksandadditions.golden_carrot_sack": "Sack of Golden Carrots",
+	"block.tweaksandadditions.melon_seeds_sack": "Sack of Melon Seeds",
+	"block.tweaksandadditions.potato_sack": "Sack of Potatoes",
+	"block.tweaksandadditions.pumpkin_seeds_sack": "Sack of Pumpkin Seeds",
+	"block.tweaksandadditions.sweet_berries_sack": "Sack of Sweet Berries",
+	"block.tweaksandadditions.wheat_seeds_sack": "Sack of Wheat Seeds"
+}
