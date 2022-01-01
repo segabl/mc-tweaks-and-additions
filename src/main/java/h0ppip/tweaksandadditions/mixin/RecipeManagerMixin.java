@@ -20,8 +20,8 @@ public class RecipeManagerMixin {
 
 	@Inject(method = "apply", at = @At("HEAD"))
 	public void apply(Map<Identifier, JsonElement> map, ResourceManager resourceManager, Profiler profiler, CallbackInfo info) {
-		for (GeneratedBlock b: TweaksAndAdditions.generatedBlocks.values()) {
-			TweaksAndAdditions.log(Level.INFO, "Adding recipes for " + b.getIdentifier().getPath());
+		for (GeneratedBlock b: GeneratedBlock.BLOCKS) {
+			TweaksAndAdditions.LOGGER.log(Level.INFO, "Adding recipes for " + b.getIdentifier().getPath());
 			map.putAll(b.createRecipes());
 		}
 	}

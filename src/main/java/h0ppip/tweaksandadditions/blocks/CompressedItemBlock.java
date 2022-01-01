@@ -9,27 +9,30 @@ import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-import org.apache.logging.log4j.Level;
 
 import java.util.HashMap;
 
 public class CompressedItemBlock extends GeneratedBlock {
-	private Item item;
-	private Identifier itemIdentifier;
+	protected Item item;
+	protected Identifier itemIdentifier;
+	protected BlockItem blockItem;
 
-	public CompressedItemBlock(Settings settings, Item item, String type) {
-		super(settings);
+	public CompressedItemBlock(Settings blockSettings, Item item, FabricItemSettings itemSettings, String type) {
+		super(blockSettings);
 
 		this.item = item;
 		this.itemIdentifier = Registry.ITEM.getId(this.item);
 		this.identifier = new Identifier(TweaksAndAdditions.MOD_ID, this.itemIdentifier.getPath() + "_" + type);
+		this.blockItem = new BlockItem(this, itemSettings);
 	}
 
-	@Override
-	public void registerBlock() {
-		TweaksAndAdditions.log(Level.INFO, "Registering " + this.identifier.getPath());
+	public BlockItem getBlockItem() {
+		return this.blockItem;
+	}
+
+	public void register() {
 		Registry.register(Registry.BLOCK, this.identifier, this);
-		Registry.register(Registry.ITEM, this.identifier, new BlockItem(this, new FabricItemSettings().group(this.item.getGroup())));
+		Registry.register(Registry.ITEM, this.identifier, this.blockItem);
 	}
 
 	private JsonObject createCraftRecipe() {

@@ -1,17 +1,15 @@
 package h0ppip.tweaksandadditions.blocks;
 
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.model.json.JsonUnbakedModel;
 import net.minecraft.item.Item;
-import net.minecraft.util.Identifier;
 
 public class ItemSackBlock extends CompressedItemBlock {
-	private Item item;
-	private Identifier itemIdentifier;
 
-	public ItemSackBlock(Settings settings, Item item) {
-		super(settings, item, "sack");
+	public ItemSackBlock(Settings blockSettings, Item item) {
+		super(blockSettings, item, new FabricItemSettings().group(item.getGroup()), "sack");
 	}
 
 	@Override

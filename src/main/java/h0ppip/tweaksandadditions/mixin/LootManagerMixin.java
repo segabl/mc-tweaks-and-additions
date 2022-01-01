@@ -19,8 +19,8 @@ import java.util.Map;
 public class LootManagerMixin {
 	@Inject(at = @At("HEAD"), method = "apply")
 	public void apply(Map<Identifier, JsonElement> map, ResourceManager resourceManager, Profiler profiler, CallbackInfo ci) {
-		for (GeneratedBlock b: TweaksAndAdditions.generatedBlocks.values()) {
-			TweaksAndAdditions.log(Level.INFO, "Adding loot drops for " + b.getIdentifier().getPath());
+		for (GeneratedBlock b: GeneratedBlock.BLOCKS) {
+			TweaksAndAdditions.LOGGER.log(Level.INFO, "Adding loot drops for " + b.getIdentifier().getPath());
 			map.putAll(b.createLootDrops());
 		}
 	}
