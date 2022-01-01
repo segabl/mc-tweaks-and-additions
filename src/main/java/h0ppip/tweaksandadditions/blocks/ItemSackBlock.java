@@ -9,7 +9,7 @@ import net.minecraft.item.Item;
 public class ItemSackBlock extends CompressedItemBlock {
 
 	public ItemSackBlock(Settings blockSettings, Item item) {
-		super(blockSettings, item, new FabricItemSettings().group(item.getGroup()), "sack");
+		super(blockSettings, item, new FabricItemSettings().group(item.getGroup()).rarity(item.getRarity(item.getDefaultStack())), "sack");
 	}
 
 	@Override
