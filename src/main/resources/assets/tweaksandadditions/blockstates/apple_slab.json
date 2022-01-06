@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "tweaksandadditions:block/apple_slab"
+    },
+    "type=double": {
+      "model": "tweaksandadditions:block/apple_planks"
+    },
+    "type=top": {
+      "model": "tweaksandadditions:block/apple_slab_top"
+    }
+  }
+}

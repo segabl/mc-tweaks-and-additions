@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "tweaksandadditions:apple_logs"
+    }
+  ],
+  "result": {
+    "item": "tweaksandadditions:apple_planks",
+    "count": 4
+  }
+}

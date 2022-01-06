@@ -27,7 +27,7 @@ public class ModelLoaderMixin {
 		String[] path = id.getPath().split("/");
 
 		Optional<Block> block = Registry.BLOCK.getOrEmpty(new Identifier(id.getNamespace(), path[1]));
-		if (block.isEmpty()) {
+		if (block.isEmpty() || !(block.get() instanceof GeneratedBlock)) {
 			return;
 		}
 

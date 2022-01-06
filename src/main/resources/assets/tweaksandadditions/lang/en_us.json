@@ -16,5 +16,24 @@
 	"block.tweaksandadditions.red_mushroom_sack": "Sack of Red Mushrooms",
 	"block.tweaksandadditions.sweet_berries_sack": "Sack of Sweet Berries",
 	"block.tweaksandadditions.warped_fungus_sack": "Sack of Warped Fungi",
-	"block.tweaksandadditions.wheat_seeds_sack": "Sack of Wheat Seeds"
+	"block.tweaksandadditions.wheat_seeds_sack": "Sack of Wheat Seeds",
+
+	"block.tweaksandadditions.apple_button": "Apple Button",
+	"block.tweaksandadditions.apple_door": "Apple Door",
+	"block.tweaksandadditions.apple_fence": "Apple Fence",
+	"block.tweaksandadditions.apple_fence_gate": "Apple Fence Gate",
+	"block.tweaksandadditions.apple_leaves": "Apple Leaves",
+	"block.tweaksandadditions.apple_log": "Apple Log",
+	"block.tweaksandadditions.apple_planks": "Apple Planks",
+	"block.tweaksandadditions.apple_pressure_plate": "Apple Pressure Plate",
+	"block.tweaksandadditions.apple_sapling": "Apple Sapling",
+	"block.tweaksandadditions.apple_sign": "Apple Sign",
+	"block.tweaksandadditions.apple_slab": "Apple Slab",
+	"block.tweaksandadditions.apple_stairs": "Apple Stairs",
+	"block.tweaksandadditions.apple_trapdoor": "Apple Trapdoor",
+	"block.tweaksandadditions.apple_wood": "Apple Wood",
+	"block.tweaksandadditions.flowering_apple_leaves": "Flowering Apple Leaves",
+	"block.tweaksandadditions.stripped_apple_log": "Stripped Apple Log",
+	"block.tweaksandadditions.stripped_apple_wood": "Stripped Apple Wood",
+	"item.tweaksandadditions.apple_boat": "Apple Boat"
 }

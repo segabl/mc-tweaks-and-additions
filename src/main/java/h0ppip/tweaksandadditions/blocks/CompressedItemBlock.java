@@ -26,10 +26,6 @@ public class CompressedItemBlock extends GeneratedBlock {
 		this.blockItem = new BlockItem(this, itemSettings);
 	}
 
-	public BlockItem getBlockItem() {
-		return this.blockItem;
-	}
-
 	public void register() {
 		Registry.register(Registry.BLOCK, this.identifier, this);
 		Registry.register(Registry.ITEM, this.identifier, this.blockItem);

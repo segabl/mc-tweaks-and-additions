@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "tweaksandadditions:block/stripped_apple_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "tweaksandadditions:block/stripped_apple_wood"
+    },
+    "axis=z": {
+      "model": "tweaksandadditions:block/stripped_apple_wood",
+      "x": 90
+    }
+  }
+}

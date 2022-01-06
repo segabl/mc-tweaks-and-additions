@@ -1,8 +1,7 @@
 package h0ppip.tweaksandadditions.blocks;
 
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import h0ppip.tweaksandadditions.TweaksAndAdditions;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.model.json.JsonUnbakedModel;
 import net.minecraft.item.Item;
 
@@ -10,11 +9,8 @@ public class ItemSackBlock extends CompressedItemBlock {
 
 	public ItemSackBlock(Settings blockSettings, Item item) {
 		super(blockSettings, item, new FabricItemSettings().group(item.getGroup()).rarity(item.getRarity(item.getDefaultStack())), "sack");
-	}
 
-	@Override
-	public void applyClientSettings() {
-		BlockRenderLayerMap.INSTANCE.putBlock(this, RenderLayer.getCutout());
+		TweaksAndAdditions.REGISTER_TRANSPARENT.add(this);
 	}
 
 	@Override

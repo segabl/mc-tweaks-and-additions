@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "tweaksandadditions:block/apple_leaves"
+  }
+}

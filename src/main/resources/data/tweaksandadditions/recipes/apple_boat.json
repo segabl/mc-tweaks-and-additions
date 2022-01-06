@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "boat",
+  "pattern": [
+    "# #",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "tweaksandadditions:apple_planks"
+    }
+  },
+  "result": {
+    "item": "tweaksandadditions:apple_boat"
+  }
+}
