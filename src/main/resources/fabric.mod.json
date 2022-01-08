@@ -2,7 +2,7 @@
 	"schemaVersion": 1,
 	"id": "tweaksandadditions",
 	"version": "${version}",
-	"name": "TweaksAndAdditions",
+	"name": "Tweaks and Additions",
 	"description": "Small tweaks and additions for Minecraft",
 	"authors": [
 		"Hoppip"
