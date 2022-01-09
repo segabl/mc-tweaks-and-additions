@@ -1,7 +1,7 @@
-package h0ppip.tweaksandadditions.generators;
+package h0ppip.tweaksandadditions.world.features.tree;
 
+import h0ppip.tweaksandadditions.TweaksAndAdditions;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.collection.DataPool;
@@ -21,7 +21,10 @@ import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
 import java.util.Random;
 
 public class AppleSaplingGenerator extends SaplingGenerator {
-	private final ConfiguredFeature<TreeFeatureConfig, ?> features;
+	public static final Identifier IDENTIFIER = new Identifier(TweaksAndAdditions.MOD_ID, "apple");
+	public static final RegistryKey<ConfiguredFeature<?, ?>> CONFIGURED_FEATURE_KEY = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, IDENTIFIER);
+
+	private ConfiguredFeature<?, ?> configuredFeature;
 
 	public AppleSaplingGenerator(Block logBlock, Block leavesBlock, Block floweringLeavesBlock) {
 		StraightTrunkPlacer trunkPlacer = new StraightTrunkPlacer(5, 1, 0);
@@ -32,14 +35,13 @@ public class AppleSaplingGenerator extends SaplingGenerator {
 		TwoLayersFeatureSize featureSize = new TwoLayersFeatureSize(1, 0, 1);
 
 		TreeFeatureConfig build = new TreeFeatureConfig.Builder(logProvider, trunkPlacer, leavesProvider, foliagePlacer, featureSize).build();
-		features = Feature.TREE.configure(build);
+		configuredFeature = Feature.TREE.configure(build);
 
-		RegistryKey<ConfiguredFeature<?, ?>> key = RegistryKey.of(Registry.CONFIGURED_FEATURE_KEY, new Identifier("tweaksandadditions", "apple"));
-		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, key.getValue(), features);
+		Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, CONFIGURED_FEATURE_KEY.getValue(), configuredFeature);
 	}
 
 	@Override
 	protected ConfiguredFeature<?, ?> getTreeFeature(Random random, boolean bees) {
-		return features;
+		return configuredFeature;
 	}
 }

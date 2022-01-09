@@ -5,7 +5,7 @@ import h0ppip.tweaksandadditions.blocks.FruitLeavesBlock;
 import h0ppip.tweaksandadditions.blocks.GeneratedBlock;
 import h0ppip.tweaksandadditions.blocks.ItemSackBlock;
 import h0ppip.tweaksandadditions.custom.*;
-import h0ppip.tweaksandadditions.generators.AppleSaplingGenerator;
+import h0ppip.tweaksandadditions.world.features.tree.AppleSaplingGenerator;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
@@ -74,9 +74,9 @@ public class TweaksAndAdditions implements ModInitializer {
 		Block applePressurePlate = new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, AbstractBlock.Settings.copy(Blocks.OAK_PRESSURE_PLATE));
 		Block appleTrapdoor = new TrapdoorBlock(AbstractBlock.Settings.copy(Blocks.OAK_TRAPDOOR));
 
-		SignType appleSignType = SignType.register(new SignType("apple"));
-		Block appleSign = new SignBlock(AbstractBlock.Settings.copy(Blocks.OAK_SIGN), appleSignType);
-		Block appleWallSign = new WallSignBlock(AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN), appleSignType);
+		// Todo: Actual apple sign
+		Block appleSign = new SignBlock(AbstractBlock.Settings.copy(Blocks.OAK_SIGN), SignType.OAK);
+		Block appleWallSign = new WallSignBlock(AbstractBlock.Settings.copy(Blocks.OAK_WALL_SIGN), SignType.OAK);
 
 		Block pottedAppleSapling = new CustomFlowerPotBlock(appleSapling, AbstractBlock.Settings.copy(Blocks.POTTED_OAK_SAPLING));
 
@@ -100,6 +100,7 @@ public class TweaksAndAdditions implements ModInitializer {
 		registerBlock("potted_apple_sapling", pottedAppleSapling);
 		registerBlock("apple_fruit", appleFruit);
 
+		// TODO: Actual apple boat
 		Registry.register(Registry.ITEM, new Identifier("tweaksandadditions", "apple_boat"), new BoatItem(BoatEntity.Type.OAK, copyItemSettings(Items.OAK_BOAT)));
 
 		StrippableBlockRegistry.register(appleLog, strippedAppleLog);
