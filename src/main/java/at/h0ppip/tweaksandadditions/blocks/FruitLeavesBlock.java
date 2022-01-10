@@ -1,6 +1,6 @@
-package h0ppip.tweaksandadditions.blocks;
+package at.h0ppip.tweaksandadditions.blocks;
 
-import h0ppip.tweaksandadditions.custom.CustomLeavesBlock;
+import at.h0ppip.tweaksandadditions.custom.CustomLeavesBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

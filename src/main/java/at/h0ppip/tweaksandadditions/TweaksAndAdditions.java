@@ -1,13 +1,13 @@
-package h0ppip.tweaksandadditions;
+package at.h0ppip.tweaksandadditions;
 
-import h0ppip.tweaksandadditions.blocks.FruitBlock;
-import h0ppip.tweaksandadditions.blocks.FruitLeavesBlock;
-import h0ppip.tweaksandadditions.blocks.GeneratedBlock;
-import h0ppip.tweaksandadditions.blocks.ItemSackBlock;
-import h0ppip.tweaksandadditions.custom.CustomFlowerPotBlock;
-import h0ppip.tweaksandadditions.custom.CustomLeavesBlock;
-import h0ppip.tweaksandadditions.custom.CustomSaplingBlock;
-import h0ppip.tweaksandadditions.world.features.tree.AppleSaplingGenerator;
+import at.h0ppip.tweaksandadditions.blocks.FruitBlock;
+import at.h0ppip.tweaksandadditions.blocks.FruitLeavesBlock;
+import at.h0ppip.tweaksandadditions.blocks.GeneratedBlock;
+import at.h0ppip.tweaksandadditions.blocks.ItemSackBlock;
+import at.h0ppip.tweaksandadditions.custom.CustomFlowerPotBlock;
+import at.h0ppip.tweaksandadditions.custom.CustomLeavesBlock;
+import at.h0ppip.tweaksandadditions.custom.CustomSaplingBlock;
+import at.h0ppip.tweaksandadditions.world.features.tree.AppleSaplingGenerator;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;

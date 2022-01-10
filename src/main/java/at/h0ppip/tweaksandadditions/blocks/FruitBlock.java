@@ -1,6 +1,6 @@
-package h0ppip.tweaksandadditions.blocks;
+package at.h0ppip.tweaksandadditions.blocks;
 
-import h0ppip.tweaksandadditions.TweaksAndAdditions;
+import at.h0ppip.tweaksandadditions.TweaksAndAdditions;
 import net.minecraft.block.*;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.Item;

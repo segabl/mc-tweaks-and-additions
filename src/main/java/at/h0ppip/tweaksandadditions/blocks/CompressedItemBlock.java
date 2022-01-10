@@ -1,8 +1,8 @@
-package h0ppip.tweaksandadditions.blocks;
+package at.h0ppip.tweaksandadditions.blocks;
 
+import at.h0ppip.tweaksandadditions.TweaksAndAdditions;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import h0ppip.tweaksandadditions.TweaksAndAdditions;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.minecraft.client.render.model.json.JsonUnbakedModel;
 import net.minecraft.item.BlockItem;

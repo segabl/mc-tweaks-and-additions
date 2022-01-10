@@ -1,6 +1,6 @@
-package h0ppip.tweaksandadditions.world.features.tree;
+package at.h0ppip.tweaksandadditions.world.features.tree;
 
-import h0ppip.tweaksandadditions.TweaksAndAdditions;
+import at.h0ppip.tweaksandadditions.TweaksAndAdditions;
 import net.minecraft.block.Block;
 import net.minecraft.block.sapling.SaplingGenerator;
 import net.minecraft.util.Identifier;

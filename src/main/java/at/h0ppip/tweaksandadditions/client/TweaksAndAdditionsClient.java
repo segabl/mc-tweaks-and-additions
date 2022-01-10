@@ -1,6 +1,6 @@
-package h0ppip.tweaksandadditions.client;
+package at.h0ppip.tweaksandadditions.client;
 
-import h0ppip.tweaksandadditions.TweaksAndAdditions;
+import at.h0ppip.tweaksandadditions.TweaksAndAdditions;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.block.Block;

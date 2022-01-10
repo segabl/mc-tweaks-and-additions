@@ -1,6 +1,6 @@
-package h0ppip.tweaksandadditions.custom;
+package at.h0ppip.tweaksandadditions.custom;
 
-import h0ppip.tweaksandadditions.TweaksAndAdditions;
+import at.h0ppip.tweaksandadditions.TweaksAndAdditions;
 import net.minecraft.block.LeavesBlock;
 
 public class CustomLeavesBlock extends LeavesBlock {

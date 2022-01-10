@@ -4,10 +4,3 @@ accessible method net/minecraft/block/PressurePlateBlock <init> (Lnet/minecraft/
 accessible method net/minecraft/block/StairsBlock <init> (Lnet/minecraft/block/BlockState;Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/TrapdoorBlock <init> (Lnet/minecraft/block/AbstractBlock$Settings;)V
 accessible method net/minecraft/block/WoodenButtonBlock <init> (Lnet/minecraft/block/AbstractBlock$Settings;)V
-
-accessible field net/minecraft/entity/ai/goal/FollowOwnerGoal tameable Lnet/minecraft/entity/passive/TameableEntity;
-accessible field net/minecraft/entity/ai/goal/FollowOwnerGoal maxDistance F
-accessible field net/minecraft/entity/ai/goal/FollowOwnerGoal minDistance F
-accessible field net/minecraft/entity/ai/goal/FollowOwnerGoal owner Lnet/minecraft/entity/LivingEntity;
-
-accessible field net/minecraft/entity/ai/brain/task/FarmerVillagerTask currentTarget Lnet/minecraft/util/math/BlockPos;

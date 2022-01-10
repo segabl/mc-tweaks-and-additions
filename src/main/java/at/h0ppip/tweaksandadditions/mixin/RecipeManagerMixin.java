@@ -1,8 +1,8 @@
-package h0ppip.tweaksandadditions.mixin;
+package at.h0ppip.tweaksandadditions.mixin;
 
+import at.h0ppip.tweaksandadditions.TweaksAndAdditions;
+import at.h0ppip.tweaksandadditions.blocks.GeneratedBlock;
 import com.google.gson.JsonElement;
-import h0ppip.tweaksandadditions.TweaksAndAdditions;
-import h0ppip.tweaksandadditions.blocks.GeneratedBlock;
 import net.minecraft.recipe.RecipeManager;
 import net.minecraft.resource.ResourceManager;
 import net.minecraft.util.Identifier;

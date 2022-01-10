@@ -1,4 +1,4 @@
-package h0ppip.tweaksandadditions.blocks;
+package at.h0ppip.tweaksandadditions.blocks;
 
 import com.google.gson.JsonObject;
 import net.minecraft.block.Block;

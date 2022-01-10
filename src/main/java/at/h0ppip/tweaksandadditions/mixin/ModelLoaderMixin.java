@@ -1,7 +1,7 @@
-package h0ppip.tweaksandadditions.mixin;
+package at.h0ppip.tweaksandadditions.mixin;
 
-import h0ppip.tweaksandadditions.TweaksAndAdditions;
-import h0ppip.tweaksandadditions.blocks.GeneratedBlock;
+import at.h0ppip.tweaksandadditions.TweaksAndAdditions;
+import at.h0ppip.tweaksandadditions.blocks.GeneratedBlock;
 import net.minecraft.block.Block;
 import net.minecraft.client.render.model.ModelLoader;
 import net.minecraft.client.render.model.json.JsonUnbakedModel;

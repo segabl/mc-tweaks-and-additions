@@ -1,4 +1,4 @@
-package h0ppip.tweaksandadditions.mixin;
+package at.h0ppip.tweaksandadditions.mixin;
 
 import net.minecraft.entity.ExperienceOrbEntity;
 import net.minecraft.entity.player.PlayerEntity;

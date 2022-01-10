@@ -1,11 +1,13 @@
 {
 	"required": true,
 	"minVersion": "0.8",
-	"package": "h0ppip.tweaksandadditions.mixin",
+	"package": "at.h0ppip.tweaksandadditions.mixin",
 	"compatibilityLevel": "JAVA_16",
 	"mixins": [
 		"FarmerVillagerTaskMixin",
+		"FarmerVillagerTaskMixin$FarmerVillagerTaskAccessor",
 		"FollowOwnerGoalMixin",
+		"FollowOwnerGoalMixin$FollowOwnerGoalAccessor",
 		"LootManagerMixin",
 		"ModelLoaderMixin",
 		"RecipeManagerMixin"

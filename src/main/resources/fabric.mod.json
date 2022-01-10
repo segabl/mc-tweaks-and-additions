@@ -13,17 +13,17 @@
 	"environment": "*",
 	"entrypoints": {
 		"client": [
-			"h0ppip.tweaksandadditions.client.TweaksAndAdditionsClient"
+			"at.h0ppip.tweaksandadditions.client.TweaksAndAdditionsClient"
 		],
 		"main": [
-			"h0ppip.tweaksandadditions.TweaksAndAdditions"
+			"at.h0ppip.tweaksandadditions.TweaksAndAdditions"
 		]
 	},
 	"mixins": [
 		"TweaksAndAdditions.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.12.11",
+		"fabricloader": ">=0.12",
 		"fabric": "*",
 		"minecraft": "1.18.x"
 	},

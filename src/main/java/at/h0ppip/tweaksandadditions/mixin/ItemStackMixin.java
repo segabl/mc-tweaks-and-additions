@@ -1,4 +1,4 @@
-package h0ppip.tweaksandadditions.mixin;
+package at.h0ppip.tweaksandadditions.mixin;
 
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
