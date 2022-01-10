@@ -31,7 +31,7 @@ public class FruitLeavesBlock extends CustomLeavesBlock implements Fertilizable 
 	public void randomTick(BlockState state, ServerWorld world, BlockPos pos, Random random) {
 		super.randomTick(state, world, pos, random);
 
-		if (random.nextInt(20) != 0) {
+		if (random.nextInt(40) != 0) {
 			return;
 		}
 
