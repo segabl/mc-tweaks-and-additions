@@ -35,5 +35,7 @@
 	"block.tweaksandadditions.flowering_apple_leaves": "Flowering Apple Leaves",
 	"block.tweaksandadditions.stripped_apple_log": "Stripped Apple Log",
 	"block.tweaksandadditions.stripped_apple_wood": "Stripped Apple Wood",
-	"item.tweaksandadditions.apple_boat": "Apple Boat"
+
+	"item.tweaksandadditions.apple_boat": "Apple Boat",
+	"item.tweaksandadditions.apple_pie": "Apple Pie"
 }

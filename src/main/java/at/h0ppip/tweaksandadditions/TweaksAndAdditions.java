@@ -33,11 +33,12 @@ public class TweaksAndAdditions implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		initGeneratedBlocks();
-		initWoodTypes();
+		createGeneratedBlocks();
+		createWoodTypes();
+		createItems();
 	}
 
-	public void initGeneratedBlocks() {
+	public static void createGeneratedBlocks() {
 		GeneratedBlock block;
 
 		AbstractBlock.Settings itemSackSettings = AbstractBlock.Settings.of(Material.ORGANIC_PRODUCT).nonOpaque().hardness(0.25f).resistance(1);
@@ -52,7 +53,7 @@ public class TweaksAndAdditions implements ModInitializer {
 		}
 	}
 
-	public void initWoodTypes() {
+	public static void createWoodTypes() {
 		Block appleFruit = new FruitBlock(AbstractBlock.Settings.of(Material.REPLACEABLE_PLANT).nonOpaque().breakInstantly().noCollision().sounds(BlockSoundGroup.CROP).dynamicBounds(), Items.APPLE);
 		Block appleLeaves = new CustomLeavesBlock(AbstractBlock.Settings.copy(Blocks.AZALEA_LEAVES));
 		Block floweringAppleLeaves = new FruitLeavesBlock(AbstractBlock.Settings.copy(Blocks.FLOWERING_AZALEA_LEAVES).ticksRandomly(), appleFruit);
@@ -112,6 +113,11 @@ public class TweaksAndAdditions implements ModInitializer {
 		FuelRegistry.INSTANCE.add(appleFenceGate.asItem(), 300);
 	}
 
+	public static void createItems() {
+		Item applePie = new Item(new FabricItemSettings().group(Items.PUMPKIN_PIE.getGroup()).food(Items.PUMPKIN_PIE.getFoodComponent()));
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, "apple_pie"), applePie);
+	}
+
 	public static FabricItemSettings copyItemSettings(Item item) {
 		return new FabricItemSettings()
 				.group(item.getGroup())
@@ -120,17 +126,17 @@ public class TweaksAndAdditions implements ModInitializer {
 	}
 
 	public static void registerBlock(String name, Block block) {
-		Registry.register(Registry.BLOCK, new Identifier("tweaksandadditions", name), block);
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, name), block);
 	}
 
 	public static void registerBlockAndItem(String name, Block block, Item.Settings blockItemSettings) {
-		Registry.register(Registry.BLOCK, new Identifier("tweaksandadditions", name), block);
-		Registry.register(Registry.ITEM, new Identifier("tweaksandadditions", name), new BlockItem(block, blockItemSettings));
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, name), block);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, name), new BlockItem(block, blockItemSettings));
 	}
 
 	public static void registerSignBlockAndItem(String type, Block standingSign, Block wallSign) {
-		Registry.register(Registry.BLOCK, new Identifier("tweaksandadditions", type + "_sign"), standingSign);
-		Registry.register(Registry.BLOCK, new Identifier("tweaksandadditions", type + "_wall_sign"), wallSign);
-		Registry.register(Registry.ITEM, new Identifier("tweaksandadditions", type + "_sign"), new SignItem(copyItemSettings(Items.OAK_SIGN), standingSign, wallSign));
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, type + "_sign"), standingSign);
+		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, type + "_wall_sign"), wallSign);
+		Registry.register(Registry.ITEM, new Identifier(MOD_ID, type + "_sign"), new SignItem(copyItemSettings(Items.OAK_SIGN), standingSign, wallSign));
 	}
 }
