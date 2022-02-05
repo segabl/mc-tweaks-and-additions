@@ -36,6 +36,9 @@
 	"block.tweaksandadditions.stripped_apple_log": "Stripped Apple Log",
 	"block.tweaksandadditions.stripped_apple_wood": "Stripped Apple Wood",
 
+	"enchantment.tweaksandadditions.vacuum": "Vacuum",
+	"enchantment.tweaksandadditions.vacuum.desc": "Places mined blocks directly into your inventory",
+
 	"item.tweaksandadditions.apple_boat": "Apple Boat",
 	"item.tweaksandadditions.apple_pie": "Apple Pie"
 }

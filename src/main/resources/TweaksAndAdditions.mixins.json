@@ -4,6 +4,7 @@
 	"package": "at.h0ppip.tweaksandadditions.mixin",
 	"compatibilityLevel": "JAVA_16",
 	"mixins": [
+		"BlockMixin",
 		"FarmerVillagerTaskMixin",
 		"FarmerVillagerTaskMixin$FarmerVillagerTaskAccessor",
 		"FollowOwnerGoalMixin",

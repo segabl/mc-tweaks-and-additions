@@ -1,23 +1,24 @@
 package at.h0ppip.tweaksandadditions.mixin;
 
 import net.minecraft.server.network.ServerPlayNetworkHandler;
-import net.minecraft.server.network.ServerPlayerEntity;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.injection.At;
-import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.Constant;
+import org.spongepowered.asm.mixin.injection.ModifyConstant;
 
 @Mixin(ServerPlayNetworkHandler.class)
 public class ServerPlayNetworkHandlerMixin {
-	// Disable vehicle movement speed check
-	@Redirect(method = "onVehicleMove(Lnet/minecraft/network/packet/c2s/play/VehicleMoveC2SPacket;)V",
-			at = @At(value = "INVOKE", target = "Lnet/minecraft/server/network/ServerPlayNetworkHandler;isHost()Z"))
-	private boolean isHost(ServerPlayNetworkHandler handler) {
-		return true;
+	@ModifyConstant(method = "onVehicleMove(Lnet/minecraft/network/packet/c2s/play/VehicleMoveC2SPacket;)V", constant = @Constant(doubleValue = 100.0))
+	private double increaseVehicleSpeedLimit(double limit) {
+		return 4 * limit;
 	}
-	// Disable player movement check if disableElytraMovementCheck gamerule is enabled
-	@Redirect(method = "onPlayerMove(Lnet/minecraft/network/packet/c2s/play/PlayerMoveC2SPacket;)V",
-			at = @At(value = "INVOKE", target = "Lnet/minecraft/server/network/ServerPlayerEntity;isFallFlying()Z"))
-	private boolean isFallFlying(ServerPlayerEntity playerEntity) {
-		return true;
+
+	@ModifyConstant(method = "onPlayerMove(Lnet/minecraft/network/packet/c2s/play/PlayerMoveC2SPacket;)V", constant = @Constant(doubleValue = 100.0))
+	private double increasePlayerMoveSpeedLimit(double limit) {
+		return 4 * limit;
+	}
+
+	@ModifyConstant(method = "onPlayerMove(Lnet/minecraft/network/packet/c2s/play/PlayerMoveC2SPacket;)V", constant = @Constant(doubleValue = 300.0))
+	private double increasePlayerFallSpeedLimit(double limit) {
+		return 4 * limit;
 	}
 }

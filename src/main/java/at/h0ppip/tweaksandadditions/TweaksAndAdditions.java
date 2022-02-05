@@ -7,12 +7,15 @@ import at.h0ppip.tweaksandadditions.blocks.ItemSackBlock;
 import at.h0ppip.tweaksandadditions.custom.CustomFlowerPotBlock;
 import at.h0ppip.tweaksandadditions.custom.CustomLeavesBlock;
 import at.h0ppip.tweaksandadditions.custom.CustomSaplingBlock;
+import at.h0ppip.tweaksandadditions.enchantments.VacuumEnchantment;
 import at.h0ppip.tweaksandadditions.world.features.tree.AppleSaplingGenerator;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.registry.FuelRegistry;
 import net.fabricmc.fabric.api.registry.StrippableBlockRegistry;
 import net.minecraft.block.*;
+import net.minecraft.enchantment.Enchantment;
+import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.vehicle.BoatEntity;
 import net.minecraft.item.*;
 import net.minecraft.sound.BlockSoundGroup;
@@ -31,11 +34,15 @@ public class TweaksAndAdditions implements ModInitializer {
 
 	public static final ArrayList<Block> REGISTER_TRANSPARENT = new ArrayList<>();
 
+	public static final Enchantment ENCHANTMENT_VACUUM = new VacuumEnchantment(Enchantment.Rarity.RARE, EquipmentSlot.MAINHAND);
+
 	@Override
 	public void onInitialize() {
 		createGeneratedBlocks();
 		createWoodTypes();
 		createItems();
+
+		registerEnchantments();
 	}
 
 	public static void createGeneratedBlocks() {
@@ -138,5 +145,9 @@ public class TweaksAndAdditions implements ModInitializer {
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, type + "_sign"), standingSign);
 		Registry.register(Registry.BLOCK, new Identifier(MOD_ID, type + "_wall_sign"), wallSign);
 		Registry.register(Registry.ITEM, new Identifier(MOD_ID, type + "_sign"), new SignItem(copyItemSettings(Items.OAK_SIGN), standingSign, wallSign));
+	}
+
+	public static void registerEnchantments() {
+		Registry.register(Registry.ENCHANTMENT, new Identifier(MOD_ID, "vacuum"), ENCHANTMENT_VACUUM);
 	}
 }
